@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LGM Task-1</title>
+    <link rel="stylesheet" href="LGM.css" />
+  </head>
+  <body>
+    <section class="sec-1">
+      <nav>
+        <div class="logo">Zippy</div>
+        <ul class="menubar">
+          <li><a href="#">Projects </a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="img-slider">
+        <div class="slide">
+          <img src="./images/img1.jpg" alt="" />
+          <div class="info">
+            <div class="sec_first">
+              <p>
+                One page promising to fill all your needs! This is Photoshop's
+                version of lorem Prion gravinda vel
+              </p>
+              <button>Learn More</button>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="./images/img2.jpg" alt="" />
+          <div class="info">
+            <div class="sec_first">
+              <p>
+                One page promising to fill all your needs! This is Photoshop's
+                version of lorem Prion gravinda vel
+              </p>
+              <button>Learn More</button>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="./images/img3.jpg" alt="" />
+          <div class="info">
+            <div class="sec_first">
+              <p>
+                One page promising to fill all your needs! This is Photoshop's
+                version of lorem Prion gravinda vel
+              </p>
+              <button>Learn More</button>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="navigation">
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        var slides = document.querySelectorAll(".slide");
+        var btns = document.querySelectorAll(".btn");
+        let currentSlide = 1;
+
+        var manualNav = function (manual) {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          slides[manual].classList.add("active");
+          btns[manual].classList.add("active");
+        };
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        var repeat = function (activeClass) {
+          let active = document.getElementsByClassName("active");
+          let i = 1;
+
+          var repeater = () => {
+            setTimeout(function () {
+              [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove("active");
+              });
+              slides[i].classList.add("active");
+              btns[i].classList.add("active");
+              i++;
+
+              if (slides.length == i) {
+                i = 0;
+              }
+              if (i >= slides.length) {
+                return;
+              }
+              repeater();
+            }, 5000);
+          };
+          repeater();
+        };
+        repeat();
+      </script>
+    </section>
+    <section class="sec-2">
+      <h2>Welcome To Zippy</h2>
+      <div class="sec_second">
+        <p>
+          <img id="umb" src="images/umbrella.png" alt="" />
+          Lorem ipsum dolor sit amet consecteture adipisicing elit. Quia commodi
+          sapiente obcaecati, ea amet autem est repellendus aut fugit quod
+          ratione, illo pariatur quasi. Labore earum aliquam facilis numquam
+          quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Quibusdam cupiditate velit, ut provident vitae, odio, recusandae
+          aspernatur sapiente tempora iusto excepturi animi atque a dignissimos
+          saepe quaerat omnis voluptates. Impedit!
+        </p>
+      </div>
+      <div class="sec_second_2">
+        <div class="first">
+          <img id="bell" src="./images/bell2.png" alt="" />
+          <p id="p-first">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+            illo quis quod eligendi. Nesciunt hic dolore sequi. Doloribus,
+            commodi neque dolorem ab id magnam impedit officiis beatae sequi
+            assumenda odio.
+          </p>
+          <button id="btn-first">Learn More</button>
+        </div>
+        <div class="second">
+          <img id="mail" src="./images/mail2.png" alt="" />
+          <p id="p-second">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            reprehenderit facilis incidunt perferendis rerum repellendus vero
+            provident quasi, ipsa maiores nobis enim mollitia natus dolores
+            sapiente quod rem, repudiandae molestiae.
+          </p>
+          <button id="btn-second">Learn More</button>
+        </div>
+        <div class="third">
+          <img id="book" src="./images/book2.png" alt="" />
+          <p id="p-third">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ut
+            voluptatem libero a, reiciendis animi harum. Porro totam sapiente
+            pariatur sint laboriosam? Minima recusandae maiores nisi tempore
+            quasi, excepturi quibusdam.
+          </p>
+          <button id="btn-third">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <h2 id="pj">Projects</h2>
+
+    <section class="sec-3">
+      <div id="sec3-first">
+        <img
+          id="sec3-img"
+          src="./images/WhatsApp Image 2021-08-28 at 9.16.02 PM.jpeg"
+        />
+        <h3 id="sec3-h">PROJECT NAME</h3>
+        <p id="sec3-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          blanditiis incidunt accusamus! Nam corrupti totam esse odio animi,
+          dolore inventore, quaerat soluta sequi eligendi corporis quidem
+          deserunt architecto earum placeat!
+        </p>
+        <button id="sec3-b">Launch Case Study</button>
+      </div>
+      <div id="sec3-second">
+        <img
+          id="sec3-img"
+          src="./images/WhatsApp Image 2021-08-28 at 9.16.39 PM.jpeg"
+        />
+        <h3 id="sec3-h">PROJECT NAME</h3>
+        <p id="sec3-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          blanditiis incidunt accusamus! Nam corrupti totam esse odio animi,
+          dolore inventore, quaerat soluta sequi eligendi corporis quidem
+          deserunt architecto earum placeat!
+        </p>
+        <button id="sec3-b">Launch Case Study</button>
+      </div>
+      <div id="sec3-third">
+        <img
+          id="sec3-img"
+          src="./images/WhatsApp Image 2021-08-28 at 9.17.01 PM.jpeg"
+        />
+        <h3 id="sec3-h">PROJECT NAME</h3>
+        <p id="sec3-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          blanditiis incidunt accusamus! Nam corrupti totam esse odio animi,
+          dolore inventore, quaerat soluta sequi eligendi corporis quidem
+          deserunt architecto earum placeat!
+        </p>
+        <button id="sec3-b">Launch Case Study</button>
+      </div>
+      <div id="sec3-fourth">
+        <img id="sec3-img" src="./images/download (1).jfif" />
+        <h3 id="sec3-h">PROJECT NAME</h3>
+        <p id="sec3-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          blanditiis incidunt accusamus! Nam corrupti totam esse odio animi,
+          dolore inventore, quaerat soluta sequi eligendi corporis quidem
+          deserunt architecto earum placeat!
+        </p>
+        <button id="sec3-b">Launch Case Study</button>
+      </div>
+    </section>
+    <h2>Price Table</h2>
+    <section class="sec-4">
+      <div class="columns">
+        <ul class="price">
+          <li class="header">Basic</li>
+          <li class="grey">$ 9.99 / year</li>
+          <li>10GB Storage</li>
+          <li>10 Emails</li>
+          <li>10 Domains</li>
+          <li>1GB Bandwidth</li>
+          <li class="grey"><a href="#" class="button">Buy</a></li>
+        </ul>
+      </div>
+
+      <div class="columns">
+        <ul class="price">
+          <li class="header">Pro</li>
+          <li class="grey">$ 24.99 / year</li>
+          <li>25GB Storage</li>
+          <li>25 Emails</li>
+          <li>25 Domains</li>
+          <li>2GB Bandwidth</li>
+          <li class="grey"><a href="#" class="button">Buy</a></li>
+        </ul>
+      </div>
+
+      <div class="columns">
+        <ul class="price">
+          <li class="header">Premium</li>
+          <li class="grey">$ 49.99 / year</li>
+          <li>50GB Storage</li>
+          <li>50 Emails</li>
+          <li>50 Domains</li>
+          <li>5GB Bandwidth</li>
+          <li class="grey"><a href="#" class="button">Buy</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec-5">
+      <h2 id="sec5-h">Videos</h2>
+      <div id="sec5">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/7-2dKzOG1pM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ZKXareXDebM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/3Z8L35lpHzw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="sec-6">
+      <h2 id="sec6-h">Zippy Team</h2>
+      <div id="sec6-d-1">
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Sara Johnson</h3>
+          <li id="sec6li">Creative Head</li>
+        </div>
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Matt Alex</h3>
+          <li id="sec6li">Art Director</li>
+        </div>
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Chis Philips</h3>
+          <li id="sec6li">Senior Designer</li>
+        </div>
+      </div>
+      <div id="sec6-d-2">
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Jimmy Smith</h3>
+          <li id="sec6li">Marketing Manager</li>
+        </div>
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Aliza</h3>
+          <li id="sec6li">SEO Monster</li>
+        </div>
+        <div id="sec6-1.1">
+          <img id="image1" src="./images/top-10-DS-projects.png" alt="#" />
+          <h3 id="sec6h">Celein John</h3>
+          <li id="sec6li">Senior Designer</li>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-7">
+      <h1>Life in Zippy</h1>
+      <div class="container">
+        <div class="content4">
+          <img id="img12" src="./images/img/images (1).jfif" />
+        </div>
+        <div class="slide5">
+          <div class="img10">
+            <img class="img6" id="img7" src="./images/img/images (2).jfif" />
+            <img class="img6" id="img8" src="./images/img/images (3).jfif" />
+            <img class="img6" id="img9" src="./images/img/download (1).jfif" />
+            <img
+              class="img6"
+              id="img11"
+              src="./images/WhatsApp Image 2021-08-28 at 9.17.01 PM.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-8">
+      <h2>News Letter SignUp</h2>
+      <form class="search_wrap">
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-txt"
+            name="box"
+            placeholder="SignUp"
+          />
+        </div>
+        <button id="sec8-btn">Sign Up</button>
+      </form>
+    </section>
+    <section class="sec-9">
+      <h2>Blog</h2>
+
+      <div class="sec_second_2">
+        <div class="first">
+          <img id="bell" src="./images/download (5).jfif" alt="" />
+          <h3 id="sec9-h">LOREM IPSUM DOLOR SIT AMET</h3>
+          <li id="sec9-l">15 Jan,15</li>
+          <p id="p-first">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+            illo quis quod eligendi. Nesciunt hic dolore sequi. Doloribus,
+            commodi neque dolorem ab id magnam impedit officiis beatae sequi
+            assumenda odio.
+          </p>
+          <button id="btn-first">Read More</button>
+        </div>
+        <div class="second">
+          <img id="mail" src="./images/images (1).jfif" alt="" />
+          <h3 id="sec9-h">LOREM IPSUM DOLOR SIT AMET</h3>
+          <li id="sec9-l">15 Jan,15</li>
+          <p id="p-second">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            reprehenderit facilis incidunt perferendis rerum repellendus vero
+            provident quasi, ipsa maiores nobis enim mollitia natus dolores
+            sapiente quod rem, repudiandae molestiae.
+          </p>
+          <button id="btn-second">Read More</button>
+        </div>
+        <div class="third">
+          <img id="book" src="./images/images (3).jfif" alt="" />
+          <h3 id="sec9-h">LOREM IPSUM DOLOR SIT AMET</h3>
+          <li id="sec9-l">15 Jan,15</li>
+          <p id="p-third">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ut
+            voluptatem libero a, reiciendis animi harum. Porro totam sapiente
+            pariatur sint laboriosam? Minima recusandae maiores nisi tempore
+            quasi, excepturi quibusdam.
+          </p>
+          <button id="btn-third">Read More</button>
+        </div>
+      </div>
+    </section>
+    <section class="sec-10">
+      <div id="map">
+        <iframe
+          id="google"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119743.40927405197!2d85.75041319959851!3d20.301031222931048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d2d5170aa5%3A0xfc580e2b68b33fa8!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1630245113920!5m2!1sen!2sin"
+          width="90%"
+          height="90%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div id="map2">
+        <div class="map2.part">
+          <h3 id="sec10-h">Contact</h3>
+          <form action="">
+            <label for="fname">Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your Name"
+            />
+
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              id="fname"
+              name="email"
+              placeholder="Your E-mail"
+            />
+
+            <label for="subject">Subject</label>
+            <select id="country" name="country">
+              <option value="math">Maths</option>
+              <option value="science">Science</option>
+              <option value="sst">SST</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write Something"
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="sec-11">
+      <div class="eleven">
+        <div class="twist">
+          <h6>ADDRESS</h6>
+          <li>Lorem Ipsum dolor,234</li>
+          <li>1200 Consecutive</li>
+          <li>Adipling</li>
+        </div>
+        <div class="follow">
+          <h6>FOLLOW US</h6>
+          <div class="image876">
+            <img id="image796" src="./images/instagram (1).png" alt="" />
+            <img id="image796" src="./images/youtube.png" alt="" />
+            <img id="image796" src="./images/telegram.png" alt="" />
+          </div>
+        </div>
+        <div class="address">
+          <h6>CONTACT US</h6>
+          <li>+123 456 789</li>
+          <li>zippy@skype</li>
+          <li>enquiry@zippy.com</li>
+        </div>
+      </div>
+    </section>
+    <script src="LGM.js"></script>
+  </body>
+</html>
